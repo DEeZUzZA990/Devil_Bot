@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://graph.org/file/d26f4cb254cc757e2ab6d.jpg)" alt="Mr.KD BOTZZ LOGO">
+  <img src="https://graph.org/file/d26f4cb254cc757e2ab6d.jpg" alt="Mr.KD BOTZZ LOGO">
 </p>
 <h1 align="center">
   <b> 𝗗𝖾𝗏𝗂𝗅_𝗕𝗈𝗍</b>
