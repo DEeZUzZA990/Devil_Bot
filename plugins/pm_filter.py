@@ -1101,7 +1101,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "owner_info":
             btn = [[
                     InlineKeyboardButton(".⇇𝗕𝖺𝖼𝗄", callback_data="start"),
-                    InlineKeyboardButton("𝗢𝗐𝗇𝖾𝗋', url="https://t.me/dz_offline_tg")
+                    InlineKeyboardButton("𝗢𝗐𝗇𝖾𝗋", url="https://t.me/dz_offline_tg")
                   ]]
             reply_markup = InlineKeyboardMarkup(btn)
             await query.message.edit_text(
