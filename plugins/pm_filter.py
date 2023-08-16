@@ -955,8 +955,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('𝗥𝖾𝗉𝗈', url='https://github.com'),
-            InlineKeyboardButton('𝗢𝗐𝗇𝖾𝗋', url='https://t.me/dz_offline_tg')
+            InlineKeyboardButton('𝗠𝗈𝗏𝗂𝖾 𝗨𝗉𝖽𝖺𝗍𝖾𝗌', url='https://t.me/cinema_flix_updates'),
+            InlineKeyboardButton('𝗕𝗈𝗍 𝗨𝗉𝖽𝖺𝗍𝖾𝗌', url='https://t.me/sd_Botz_Updates')
             ],[
             InlineKeyboardButton('.⇇𝗕𝖺𝖼𝗄', callback_data='start'),
         ]]
@@ -1111,11 +1111,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "supports":
             btn = [[
-                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/+vP8QdSOL8BpjM2E1"),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/Mallu_Movie_Hub_Group")
+                    InlineKeyboardButton("𝗠𝗈𝗏𝗂𝖾 𝗚𝗋𝗈𝗎𝗉", url="https://t.me/+iEbhY7mM4oE1OTVl"),
+                    InlineKeyboardButton("𝗕𝗈𝗍 𝗦𝗎𝗉𝗉𝗈𝗋𝗍", url="https://t.me/+JBgW1T1ZsUYyNTg1")
                     ],[
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url="https://t.me/Mr_KD_BOTZZ"),
-                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/CinemaShopLinkz")
+                    InlineKeyboardButton("𝗠𝗈𝗏𝗂𝖾 𝗨𝗉𝖽𝖺𝗍𝖾𝗌", url="https://t.me/cinema_flix_updates"),
+                    InlineKeyboardButton("𝗕𝗈𝗍 𝗨𝗉𝖽𝖺𝗍𝖾𝗌", url="https://t.me/sd_Botz_Updates")
                     ],[
                     InlineKeyboardButton(".⇇𝗕𝖺𝖼𝗄", callback_data="start")
                   ]]
@@ -1189,7 +1189,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "suneesh":
         buttons = [[
-            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url='https://t.me/Mr_KD_BOTZZ'),
+            InlineKeyboardButton('𝗥𝖾𝗉𝗈', url='https://github.com'),
             InlineKeyboardButton('𝗢𝗐𝗇𝖾𝗋', url='https://t.me/dz_offline_tg')
             ],[
             InlineKeyboardButton('.⇇𝗕𝖺𝖼𝗄', callback_data='help')
@@ -1222,7 +1222,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )    
     elif query.data == "extra":
         buttons = [[
-            InlineKeyboardButton('☠ᴀᴅᴍɪɴ ᴏɴʟʏ☠', callback_data='admin'),
+            InlineKeyboardButton('🤴𝗔𝖽𝗆𝗂𝗇 𝗢𝗇𝗅𝗒🤴', callback_data='admin'),
             InlineKeyboardButton('.⇇𝗕𝖺𝖼𝗄', callback_data='help2')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
