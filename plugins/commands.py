@@ -22,10 +22,10 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[           
-            InlineKeyboardButton('✇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/CinemaShopLinkz'),
-            InlineKeyboardButton('✇ ɢʀᴏᴜᴘ', url='https://t.me/+vP8QdSOL8BpjM2E1')
+            InlineKeyboardButton('𝗠𝗈𝗏𝗂𝖾 𝗨𝗉𝖽𝖺𝗍𝖾𝗌', url='https://t.me/cinema_flix_updates'),
+            InlineKeyboardButton('𝗕𝗈𝗍 𝗨𝗉𝖽𝖺𝗍𝖾𝗌', url='https://t.me/sd_Botz_Updates')
             ],[
-            InlineKeyboardButton('〄 ʜᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help")
+            InlineKeyboardButton('〄 𝗛𝖾𝗅𝗉', url=f"https://t.me/{temp.U_NAME}?start=help")
             ]]
         await message.reply(START_MESSAGE.format(user=message.from_user.mention if message.from_user else message.chat.title, bot=temp.B_LINK), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)                    
         await asyncio.sleep(2) 
@@ -39,7 +39,15 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention, message.from_user.username, temp.U_NAME))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('※ ᴄʟɪᴄᴋ ʜᴇʀᴇ ғᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴs ※', callback_data='start')
+            InlineKeyboardButton('✛ 𝗔𝖽𝖽 𝗠𝖾 𝗧𝗈 𝗬𝗈𝗎𝗋 𝗚𝗋𝗈𝗎𝗉 ✛', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('♚ 𝗗𝖾𝗏', callback_data='source'),
+            InlineKeyboardButton('⌬ 𝗦𝗎𝗉𝗉𝗈𝗋𝗍', url='https://t.me/+iEbhY7mM4oE1OTVl')     
+            ],[
+            InlineKeyboardButton('〄 𝗛𝖾𝗅𝗉', callback_data='help2'),
+            InlineKeyboardButton('⍟ 𝗔𝖻𝗈𝗎𝗍', callback_data='about')
+            ],[
+            InlineKeyboardButton('⎋ 𝗜𝗇𝗅𝗂𝗇𝖾 𝗦𝖾𝖺𝗋𝖼𝗁 𝗠𝗈𝖻𝖾 ⎋', switch_inline_query_current_chat='')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action(enums.ChatAction.TYPING)
@@ -62,7 +70,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "✇ ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ✇", url=invite_link.invite_link
+                    "🤖 𝗝𝗈𝗂𝗇 𝗨𝗉𝖽𝖺𝗍𝖾𝗌 𝗖𝗁𝖺𝗇𝗇𝖾𝗅", url=invite_link.invite_link
                 )
             ]
         ]
@@ -71,9 +79,9 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton(" ᴛʀʏ ᴀɢᴀɪɴ ♽", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton(" 🔄 𝗧𝗋𝗒 𝗔𝗀𝖺𝗂𝗇", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton(" ᴛʀʏ ᴀɢᴀɪɴ ♽", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton(" 🔄 𝗧𝗋𝗒 𝗔𝗀𝖺𝗂𝗇", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
             text=FORCE_SUB_TEXT,
@@ -83,7 +91,15 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('※ ᴄʟɪᴄᴋ ʜᴇʀᴇ ғᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴs ※', callback_data='start')
+            InlineKeyboardButton('✛ 𝗔𝖽𝖽 𝗠𝖾 𝗧𝗈 𝗬𝗈𝗎𝗋 𝗚𝗋𝗈𝗎𝗉 ✛', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('♚ 𝗗𝖾𝗏', callback_data='source'),
+            InlineKeyboardButton('⌬ 𝗦𝗎𝗉𝗉𝗈𝗋𝗍', url='https://t.me/+iEbhY7mM4oE1OTVl')     
+            ],[
+            InlineKeyboardButton('〄 𝗛𝖾𝗅𝗉', callback_data='help2'),
+            InlineKeyboardButton('⍟ 𝗔𝖻𝗈𝗎𝗍', callback_data='about')
+            ],[
+            InlineKeyboardButton('⎋ 𝗜𝗇𝗅𝗂𝗇𝖾 𝗦𝖾𝖺𝗋𝖼𝗁 𝗠𝗈𝖻𝖾 ⎋', switch_inline_query_current_chat='')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action(enums.ChatAction.TYPING)
@@ -241,8 +257,8 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                  [
-                  InlineKeyboardButton('💥 ɢʀᴏᴜᴘ', url="https://t.me/+vP8QdSOL8BpjM2E1"),
-                  InlineKeyboardButton('💌 ᴄʜᴀɴɴᴇʟ', url="https://t.me/CinemaShopLinkz")
+                  InlineKeyboardButton('💥𝗕𝗈𝗍 𝗦𝗎𝗉𝗉𝗈𝗋𝗍', url="https://t.me/+JBgW1T1ZsUYyNTg1"),
+                  InlineKeyboardButton('💌𝗕𝗈𝗍 𝗨𝗉𝖽𝖺𝗍𝖾𝗌', url="https://t.me/sd_Botz_Updates")
                ],[
                   InlineKeyboardButton(text=f'🌿 Fɪʟᴇ sɪᴢᴇ 【 {size} 】🌿', callback_data='gxneo')
                  ]
@@ -409,61 +425,61 @@ async def settings(client, message):
         buttons = [
             [
                 InlineKeyboardButton(
-                    '𝐅𝐈𝐋𝐓𝐄𝐑 𝐁𝐔𝐓𝐓𝐎𝐍',
+                    '𝗙𝗂𝗅𝗍𝖾𝗋 𝗕𝗎𝗍𝗍𝗈𝗇',
                     callback_data=f'setgs#button#{settings["button"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '𝐒𝐈𝐍𝐆𝐋𝐄' if settings["button"] else '𝐃𝐎𝐔𝐁𝐋𝐄',
+                    '𝗦𝗂𝗇𝗀𝗅𝖾' if settings["button"] else '𝗦𝗂𝗇𝗀𝗅𝖾',
                     callback_data=f'setgs#button#{settings["button"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    '𝐁𝐎𝐓 𝐏𝐌',
+                    '𝗙𝗂𝗅𝖾 𝗠𝗈𝖽𝖾',
                     callback_data=f'setgs#botpm#{settings["botpm"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ 𝐘𝐄𝐒' if settings["botpm"] else '🗑️ 𝐍𝐎',
+                    '𝗖𝗁𝖺𝗇𝗇𝖾𝗅' if settings["botpm"] else '𝗦𝗍𝖺𝗋𝗍',
                     callback_data=f'setgs#botpm#{settings["botpm"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    '𝐅𝐈𝐋𝐄 𝐒𝐄𝐂𝐔𝐑𝐄',
+                    '𝗙𝗂𝗅𝖾 𝗦𝖾𝖼𝗎𝗋𝖾',
                     callback_data=f'setgs#file_secure#{settings["file_secure"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ 𝐘𝐄𝐒' if settings["file_secure"] else '🗑️ 𝐍𝐎',
+                    '✅ 𝗘𝗇𝖺𝖻𝗅𝖾' if settings["file_secure"] else '🚫 𝗗𝗂𝗌𝖺𝖻𝗅𝖾',
                     callback_data=f'setgs#file_secure#{settings["file_secure"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    '𝐈𝐌𝐃𝐁',
+                    '𝗜𝗆𝖽𝖻 𝗣𝗈𝗌𝗍𝖾𝗋',
                     callback_data=f'setgs#imdb#{settings["imdb"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ 𝐘𝐄𝐒' if settings["imdb"] else '🗑️ 𝐍𝐎',
+                    '✅ 𝗘𝗇𝖺𝖻𝗅𝖾' if settings["imdb"] else '🚫 𝗗𝗂𝗌𝖺𝖻𝗅𝖾',
                     callback_data=f'setgs#imdb#{settings["imdb"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    '𝐒𝐏𝐄𝐋𝐋 𝐂𝐇𝐄𝐂𝐊',
+                    '𝗦𝗉𝖾𝗅𝗅 𝗖𝗁𝖾𝖼𝗄',
                     callback_data=f'setgs#spell_check#{settings["spell_check"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ 𝐘𝐄𝐒' if settings["spell_check"] else '🗑️ 𝐍𝐎',
+                    '✅ 𝗘𝗇𝖺𝖻𝗅𝖾' if settings["spell_check"] else '🚫 𝗗𝗂𝗌𝖺𝖻𝗅𝖾',
                     callback_data=f'setgs#spell_check#{settings["spell_check"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    '𝐖𝐄𝐋𝐂𝐎𝐌𝐄',
+                    '𝗪𝖾𝗅𝖼𝗈𝗆𝖾 𝗠𝗌𝗀',
                     callback_data=f'setgs#welcome#{settings["welcome"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ 𝐘𝐄𝐒' if settings["welcome"] else '🗑️ 𝐍𝐎',
+                    '✅ 𝗘𝗇𝖺𝖻𝗅𝖾' if settings["welcome"] else '🚫 𝗗𝗂𝗌𝖺𝖻𝗅𝖾',
                     callback_data=f'setgs#welcome#{settings["welcome"]}#{grp_id}',
                 ),
             ],
