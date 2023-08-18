@@ -595,9 +595,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                  InlineKeyboardButton('💥𝗕𝗈𝗍 𝗦𝗎𝗉𝗉𝗈𝗋𝗍', url="https://t.me/+JBgW1T1ZsUYyNTg1"),
-                  InlineKeyboardButton('💌𝗕𝗈𝗍 𝗨𝗉𝖽𝖺𝗍𝖾𝗌', url="https://t.me/sd_Botz_Updates")
-               ],[
                   InlineKeyboardButton(text=f'🌿 Fɪʟᴇ sɪᴢᴇ 【 {size} 】🌿', callback_data='gxneo')
                  ]
                 ]
